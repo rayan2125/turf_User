@@ -77,16 +77,24 @@ const Turfbooking = () => {
 <Header
 titile="My Booking"
 />
-    <View style={{padding:10}}>
+    <View style={{}}>
         <ScrollView>
 
         {
         data.map((item, index)=>{
             return(
-                <View style={{backgroundColor:'white', marginBottom:10,
-                elevation:7,zIndex:99, paddingHorizontal:15,
-                 paddingVertical:15,
-                 borderRadius:15, position:'relative'}}>
+                <View style={{
+                    backgroundColor: 'white',
+                    marginBottom: 10,
+                    marginTop: 10,
+                    elevation: 7,
+                    zIndex: 99,
+                    paddingHorizontal: 15,
+                    paddingVertical: 15,
+                    borderRadius: 15,
+                    position: 'relative',
+                    // height:40
+                  }}>
 
       <Text>{item.name}</Text>
       <Text>Timming:{item.date}</Text>

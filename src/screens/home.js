@@ -7,6 +7,11 @@ const Home = () => {
     <View>
      
       <Slider/>
+      <View>
+        <Text>
+          Near by 
+        </Text>
+      </View>
       
     </View>
   )
