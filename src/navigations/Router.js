@@ -5,6 +5,7 @@ import Icon from "react-native-vector-icons/FontAwesome5"
 import History from '../screens/History';
 import Profile from '../screens/Profile';
 import Turfbooking from '../screens/Booking/Turfbooking';
+import BookTurf from '../screens/Booking/BookTurf';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -13,6 +14,7 @@ const HomeStack = () => {
       <Stack.Navigator screenOptions={{headerShown:false}}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name='Turfbooking' component={Turfbooking}/>
+        <Stack.Screen name='BookTurf' component={BookTurf}/>
       </Stack.Navigator>
     );
   }

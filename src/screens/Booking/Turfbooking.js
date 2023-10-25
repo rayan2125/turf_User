@@ -65,20 +65,25 @@ const data=[
 {name:'mari and boys ',
     timing:"10am",
     price:"700",
-    date:'30-10-2023'
+    date:'30-10-2023',
+
 
 
 },
 ]
-const Turfbooking = () => {
+const Turfbooking = ({navigation}) => {
+    const handleback=()=>{
+        navigation.navigate("Profile")
+    }
   return (
 
     <>
 <Header
+back={handleback}
 titile="My Booking"
 />
-    <View style={{padding:10}}>
-        <ScrollView>
+    <View style={{padding:10,flex:1}}>
+        <ScrollView style={{flex:1}}>
 
         {
         data.map((item, index)=>{
@@ -86,11 +91,12 @@ titile="My Booking"
                 <View style={{backgroundColor:'white', marginBottom:10,
                 elevation:7,zIndex:99, paddingHorizontal:15,
                  paddingVertical:15,
+                 flex:1,
                  borderRadius:15, position:'relative'}}>
 
       <Text>{item.name}</Text>
-      <Text>Timming:{item.date}</Text>
-      <Text>price:{item.price}</Text>
+      <Text>Date:{item.date}</Text>
+      <Text>Timing:{item.time}</Text>
       <Text>price:{item.price}</Text>
       <View style={{position:'absolute',right:5, bottom:5}}>
         <Text style={{color:'green'}}>30mins only</Text>
