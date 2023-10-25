@@ -6,6 +6,7 @@ import NearBy from './NearBy/NearBy'
 
 const Home = () => {
   return (
+<<<<<<< HEAD
     <View style={{margin:Sizes.fixPadding,flex:1,}}>
       <View style={{width:'100%', borderColor:'black', borderWidth:1,height:30,borderRadius:15,justifyContent:'center'}}>
 
@@ -23,6 +24,16 @@ const Home = () => {
         Near by you
       </Text>
     <NearBy/>
+=======
+    <View>
+     
+      <Slider/>
+      <View>
+        <Text>
+          Near by 
+        </Text>
+      </View>
+>>>>>>> 44f056173278cea263bd0ce095c56bab7c480564
       
     </View>
   )
