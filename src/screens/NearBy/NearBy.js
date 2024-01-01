@@ -8,36 +8,42 @@ const NearBy = () => {
 
     const nameTurf=[
         {
+            img:require("../../assets/Images/nsd.jpeg"),
             name:'mari ka turf',
             price:'700/hours',
             timming:"7am-12pm",
             location:"mira road"
         },
         {
+            img:require("../../assets/Images/box.jpeg"),
             name:'mari ka turf',
             price:'700/hours',
             timming:"7am-12pm",
             location:"mira road"
         },
         {
+            img:require("../../assets/Images/cricket.jpeg"),
             name:'mari ka turf',
             price:'700/hours',
             timming:"7am-12pm",
             location:"mira road"
         },
         {
+            img:require("../../assets/Images/end.jpeg"),
             name:'mari ka turf',
             price:'700/hours',
             timming:"7am-12pm",
             location:"mira road"
         },
         {
+            img:require("../../assets/Images/football.jpeg"),
             name:'mari ka turf',
             price:'700/hours',
             timming:"7am-12pm",
             location:"mira road"
         },
         {
+            img:require("../../assets/Images/ravi.jpeg"),
             name:'mari ka turf',
             price:'700/hours',
             timming:"7am-12pm",
@@ -51,6 +57,7 @@ const NearBy = () => {
     nameTurf.map((item,index)=>{
         return(
             <TurfCard
+            img={item.img}
             name={item.name}
             locations={item.location}
             price={item.price}

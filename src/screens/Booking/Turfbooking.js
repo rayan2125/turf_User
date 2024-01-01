@@ -82,37 +82,17 @@ const Turfbooking = ({navigation}) => {
 back={handleback}
 titile="My Booking"
 />
-<<<<<<< HEAD
     <View style={{padding:10,flex:1}}>
         <ScrollView style={{flex:1}}>
-=======
-    <View style={{}}>
-        <ScrollView>
->>>>>>> 44f056173278cea263bd0ce095c56bab7c480564
 
         {
         data.map((item, index)=>{
             return(
-<<<<<<< HEAD
                 <View style={{backgroundColor:'white', marginBottom:10,
                 elevation:7,zIndex:99, paddingHorizontal:15,
                  paddingVertical:15,
                  flex:1,
                  borderRadius:15, position:'relative'}}>
-=======
-                <View style={{
-                    backgroundColor: 'white',
-                    marginBottom: 10,
-                    marginTop: 10,
-                    elevation: 7,
-                    zIndex: 99,
-                    paddingHorizontal: 15,
-                    paddingVertical: 15,
-                    borderRadius: 15,
-                    position: 'relative',
-                    // height:40
-                  }}>
->>>>>>> 44f056173278cea263bd0ce095c56bab7c480564
 
       <Text>{item.name}</Text>
       <Text>Date:{item.date}</Text>

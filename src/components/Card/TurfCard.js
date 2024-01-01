@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity,Image } from 'react-native'
 import React from 'react'
 import { Sizes, color } from '../../assets/Constant/Constant'
 import { useNavigation } from '@react-navigation/native';
-const TurfCard = ({ name, price, locations, timming }) => {
+const TurfCard = ({ name, price, locations, timming,img }) => {
     const navigation= useNavigation()
     return (
         <View>
@@ -19,8 +19,10 @@ const TurfCard = ({ name, price, locations, timming }) => {
                 borderWidth: 1,
                 // backgroundColor: color.Secondry
             }}>
-                <View style={{ backgroundColor: color.Primary, width: 100, height: 100, borderRadius: 99, justifyContent: 'center', alignItems: 'center' }}>
-                    <Text>img</Text>
+                <View style={{ backgroundColor: color.Primary, width: 100, height: 100, borderRadius: 99, justifyContent: 'space-between', alignItems: 'center' }}>
+                    <Image source={img}
+                    style={{width:100,height:100,}}
+                    />
                 </View>
                 <View style={{ marginHorizontal: 15 }}>
                     <Text>{name}</Text>
@@ -28,7 +30,7 @@ const TurfCard = ({ name, price, locations, timming }) => {
                     <Text>{locations}</Text>
                     <Text>{timming}</Text>
                 </View>
-            </View>
+
             <TouchableOpacity 
             onPress={()=>navigation.navigate('BookTurf')}
             style={{
@@ -41,6 +43,7 @@ const TurfCard = ({ name, price, locations, timming }) => {
             }}>
                 <Text style={{ color: 'white' }}>book</Text>
             </TouchableOpacity>
+            </View>
         </View>
     )
 }
