@@ -4,7 +4,7 @@ export const Sizes = {
     fixPadding: 10.0,
 }
 export const color={
-    Primary :"#FF3333",
+    Primary :"#38b000",
     Secondry:"#FF7733",
 
 }

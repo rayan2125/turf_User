@@ -30,7 +30,7 @@ const Slider = () => {
 
 
   const renderItem = ({ item }) => (
-    <View style={{ borderRadius: Sizes.fixPadding, backgroundColor: 'white', flex: 1, width: '100%',gap:10,rowGap:10 }}>
+    <View style={{ borderRadius: Sizes.fixPadding, flex: 1, width: '100%', }}>
       <Image source={item.img} style={{
         width: 300,
         height: 150,
@@ -38,7 +38,7 @@ const Slider = () => {
         borderRadius: Sizes.fixPadding,
         marginRight: Sizes.fixPadding * 2,
       }} resizeMode='cover' />
-      <Text>{item.name}</Text>
+      {/* <Text style={{color:'black', textAlign:'center'}}>{item.name}</Text> */}
     </View>
   );
   return (

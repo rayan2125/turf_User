@@ -1,11 +1,12 @@
-import { StyleSheet, Text, View,ScrollView } from 'react-native'
+import { StyleSheet, Text, View,ScrollView, FlatList } from 'react-native'
 import React from 'react'
 import { Sizes, color } from '../../assets/Constant/Constant'
 import TurfCard from '../../components/Card/TurfCard'
+import { useNavigation } from '@react-navigation/native'
  
 
 const NearBy = () => {
-
+const navigation = useNavigation()
     const nameTurf=[
         {
             img:require("../../assets/Images/nsd.jpeg"),
@@ -51,22 +52,31 @@ const NearBy = () => {
         },
     ]
   return (
-    <View style={{flex:1,flex:1,margin:Sizes.fixPadding}}>
-     <ScrollView>
-{
-    nameTurf.map((item,index)=>{
-        return(
-            <TurfCard
-            img={item.img}
-            name={item.name}
-            locations={item.location}
-            price={item.price}
-            timming={item.timming}/>
-        )
-    })
-}
-     </ScrollView>
-    </View>
+    <>
+<FlatList
+  data={nameTurf}
+  renderItem={({ item, index }) => {
+   
+    return (
+      <TurfCard
+      key={index}
+        img={item.img}
+        name={item.name}
+        location={item.location} 
+        price={item.price}
+        timming={item.timming}  
+        onPress={()=>navigation.navigate('BookTurf',item)}
+      />
+    );
+  }}
+/>
+
+    </>
+    
+
+
+     
+  
   )
 }
 
